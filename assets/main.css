@@ -201,15 +201,6 @@ h1 {
   width: 100%;
 }
 
-#replitBadge {
-  display: none;
-}
-
-.line {
-  border-bottom: 3px solid #000;
-  margin-bottom: 80px;
-}
-
 #header-container.header-container--fixed {
   visibility: unset;
   height: 105px;
@@ -263,12 +254,6 @@ h1 {
 }
 
 /** FINE STILE DROPDOWN ***/
-
-#footer .line {
-  border-bottom: 1.1px solid white;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
 
 .footer-info p:first-of-type {
   margin-bottom: 15px;
