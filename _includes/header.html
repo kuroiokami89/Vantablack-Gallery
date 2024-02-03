@@ -1,38 +1,61 @@
-<header id="header">
-  <div class="header-container">
-    <a id="logo" href="#top">
-      <span id="name">VAntAblAck itAly</span>
-    </a>
-    <div class="header-anchors">
-      <a class="link" href="#about">About</a>
-      <a class="link" href="#projects">projects</a>
-      <a class="link" href="#skills">skills</a>
-      <a class="link" href="#footer">coNtAct</a>
+<div id="header-container">
+  <div class="header-links">
+    <a href="#top"><img class="logo" src="pics/artsense.png" /></a>
+    <button id="menuButton" class="menu" aria-label="Main Menu">
+      <svg width="75" height="75" viewBox="0 0 100 100">
+        <path
+          class="line line1"
+          d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+        />
+        <path class="line line2" d="M 20,50 H 80" />
+        <path
+          class="line line3"
+          d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+        />
+      </svg>
+    </button>
+    <div id="dropdownMenu" class="dropdown">
+      <div class="dropdown-container">
+        <div class="dropdown-menu">
+          <div class="dropdown-menu-socials">
+            <a
+              href="https://stackoverflow.com/questions/25488763/why-not-allow-the-href-attribute-in-tags-other-than-the-anchor-eg-h1-href"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://stackoverflow.com/questions/25488763/why-not-allow-the-href-attribute-in-tags-other-than-the-anchor-eg-h1-href"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+            <a
+              href="https://stackoverflow.com/questions/25488763/why-not-allow-the-href-attribute-in-tags-other-than-the-anchor-eg-h1-href"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a
+              href="https://stackoverflow.com/questions/25488763/why-not-allow-the-href-attribute-in-tags-other-than-the-anchor-eg-h1-href"
+              ><i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+          <div class="dropdown-menu-about-me">{% include about.html %}</div>
+        </div>
+      </div>
     </div>
   </div>
-</header>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</div>
 <script>
-  AOS.init();
+  document.addEventListener("DOMContentLoaded", function () {
+    var menuButton = document.getElementById("menuButton");
+    var dropdownMenu = document.getElementById("dropdownMenu");
 
-  $(document).ready(function () {
-    var lastScrollTop = 0;
-
-    // SCRIPT TO HIDE THE HEADER SCROLLING DOWN WITH
-    $(document).scroll(function () {
-      var scroll_pos = $(this).scrollTop();
-
-      if (scroll_pos > lastScrollTop) {
-        // Scrolling down
-        $("#header").fadeOut();
+    menuButton.addEventListener("click", function () {
+      if (menuButton.classList.contains("opened")) {
+        dropdownMenu.classList.remove("active");
+        dropdownMenu.style.display = "none";
+        menuButton.classList.remove("opened");
       } else {
-        // Scrolling up
-        $("#header").fadeIn();
+        dropdownMenu.classList.add("active");
+        dropdownMenu.style.display = "block";
+        menuButton.classList.add("opened");
       }
-
-      lastScrollTop = scroll_pos;
     });
   });
 </script>
