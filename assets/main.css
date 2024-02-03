@@ -261,6 +261,10 @@ h1 {
 
 /* GALLERY */
 
+.grid {
+  margin-top: 80px;
+}
+
 /* clear fix */
 .grid:after {
   content: "";
