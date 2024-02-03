@@ -1,0 +1,327 @@
+@media screen and (max-width: 1750px) {
+  .header-bottom {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .project-container {
+    column-gap: 0;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .header-container {
+    padding: 30px 100px;
+  }
+  #about,
+  #works,
+  #skills {
+    width: 100%;
+    height: 100%;
+  }
+
+  #about {
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    margin: 0 30px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .about-me {
+    height: 550px;
+    padding: 0 150px;
+  }
+
+  .about-me p {
+    margin: 0;
+  }
+
+  #about h1 {
+    font-size: 3.5rem !important;
+    line-height: 4.5rem;
+  }
+
+  .about-container {
+    align-items: center;
+  }
+
+  .project-list {
+    row-gap: 200px;
+  }
+
+  h1 {
+    font-size: 6rem !important;
+    line-height: 80px;
+  }
+
+  #skills {
+    padding: 0px;
+  }
+
+  .skills-text {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .about-me {
+    padding: 0;
+  }
+
+  #projects {
+    padding: 0;
+    margin: 0 100px;
+  }
+
+  #projects h2 {
+    margin-left: 50px;
+  }
+
+  .project-img {
+    width: 500px;
+    height: 650px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    scroll-snap-type: none; /* Disable snap scroll for mobile devices */
+    height: auto;
+  }
+
+  .home {
+    height: auto; /* Remove the fixed height for sections on mobile devices */
+    width: auto; /* Remove the minimum height for sections on mobile devices */
+    scroll-snap-align: none; /* Remove snap alignment for mobile devices */
+  }
+
+  h1 {
+    font-size: 3.5rem !important;
+  }
+
+  .arrow-down {
+    left: unset;
+  }
+
+  #header {
+    display: none !important;
+  }
+
+  #projects,
+  #skills {
+    padding: 30px;
+  }
+
+  #projects h2 {
+    margin-left: 0;
+  }
+
+  .project-container {
+    flex-direction: column;
+  }
+
+  .project-img {
+    width: 100%;
+    height: 500px;
+  }
+
+  .project-list-right {
+    margin-top: 100px;
+  }
+
+  .project-list-left,
+  .project-list-right {
+    row-gap: 100px;
+  }
+
+  #works {
+    padding: 50px 30px;
+  }
+
+  .about-me {
+    margin: 50px 0;
+  }
+
+  #footer {
+    padding: 30px;
+  }
+
+  #about {
+    padding: 0;
+    gap: 20px;
+    margin: 100px 0;
+  }
+
+  .about-container {
+    margin: 0 30px;
+  }
+
+  .home-text {
+    padding: 0;
+    flex-direction: column-reverse;
+  }
+
+  .home-text img {
+    width: 100%;
+  }
+
+  .header-links img {
+    max-width: 43px;
+  }
+
+  .header-container {
+    width: 100%;
+    row-gap: 50px;
+    padding: 20px 30px;
+  }
+
+  .header-container img {
+    margin-top: 10px;
+  }
+
+  .project-list-carousel {
+    width: 100% !important;
+  }
+
+  .project-list {
+    flex-direction: column;
+  }
+
+  .project-list-carousel {
+    overflow: hidden !important;
+  }
+
+  #skills {
+    text-align: left;
+  }
+
+  #skills p,
+  #skills h2 {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body,
+  html *,
+  body * {
+    cursor: none;
+  }
+
+  button,
+  a {
+    cursor: auto;
+  }
+  h1 {
+    line-height: 50px;
+  }
+
+  h2,
+  h3 {
+    font-size: 3rem !important;
+    line-height: unset;
+    margin-bottom: 20px !important;
+  }
+
+  h3 {
+    font-size: 2rem !important;
+  }
+
+  .header-anchors {
+    font-size: 1.25rem;
+  }
+
+  .header-bottom {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .home-text {
+    padding: 30px;
+  }
+
+  #about {
+    margin-top: 65px;
+  }
+
+  #about h1 {
+    font-size: 2.5rem !important;
+    line-height: 3.5rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    column-gap: 20px;
+  }
+
+  .about-me {
+    text-align: left;
+  }
+
+  .foot-info {
+    text-align: center;
+  }
+
+  .header-links img {
+    max-width: 40px;
+  }
+
+  #footer {
+    flex-direction: column;
+    align-items: baseline;
+    row-gap: 5px;
+    margin: 50px 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 50px;
+    text-align: left;
+    align-items: center;
+  }
+
+  .footer-socials {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+  }
+
+  #skills p {
+    margin: 0;
+  }
+
+  #text1,
+  #text2 {
+    font-size: 4rem !important;
+  }
+
+  #email-bar {
+    padding: 150px;
+  }
+
+  .tech-list {
+    margin-top: 50px;
+    row-gap: 40px;
+    column-gap: 40px;
+  }
+
+  .about-me p {
+    margin: 0;
+  }
+
+  #projects {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-links img {
+    max-width: 34px;
+  }
+
+  #text1,
+  #text2 {
+    font-size: 2rem !important;
+  }
+}

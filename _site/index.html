@@ -1,0 +1,279 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="assets/main.css" />
+<link rel="stylesheet" type="text/css" href="assets/mediaquery.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="https://fonts.cdnfonts.com/css/heavitas" rel="stylesheet" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+<!-- FONTS -->
+<link href="https://fonts.cdnfonts.com/css/afacad" rel="stylesheet" />
+
+<!-- FONT TITOLI -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- FONT PARAGRAFI -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap"
+  rel="stylesheet"
+/>
+<!-- FINE FONTS -->
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<!-- TEXT EFFECTS -->
+<script src="js\typeWriterEffect.js"></script>
+<!-- END TEXT EFFECTS -->
+
+<!-- SMOOTH SCROLL -->
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+<!-- END SMOOTH SCROLL -->
+
+    <link rel="icon" type="image/x-icon" href="pics/vb.ico" />
+    <title>VantaBlack Portfolio</title>
+  </head>
+  <body>
+    <header id="header">
+  <div class="header-container">
+    <a id="logo" href="#top">
+      <span id="name">VAntAblAck itAly</span>
+    </a>
+    <div class="header-anchors">
+      <a class="link" href="#about">About</a>
+      <a class="link" href="#projects">projects</a>
+      <a class="link" href="#skills">skills</a>
+      <a class="link" href="#footer">coNtAct</a>
+    </div>
+  </div>
+</header>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  AOS.init();
+
+  $(document).ready(function () {
+    var lastScrollTop = 0;
+
+    // SCRIPT TO HIDE THE HEADER SCROLLING DOWN WITH
+    $(document).scroll(function () {
+      var scroll_pos = $(this).scrollTop();
+
+      if (scroll_pos > lastScrollTop) {
+        // Scrolling down
+        $("#header").fadeOut();
+      } else {
+        // Scrolling up
+        $("#header").fadeIn();
+      }
+
+      lastScrollTop = scroll_pos;
+    });
+  });
+</script>
+ <div id="top"></div>
+<div id="about" data-aos="fade-up">
+  <div class="about-container">
+    <div class="about-title">
+      <h1 class="about-animated"></h1>
+      <span class="about-span-animated"></span>
+    </div>
+    <div class="about-me" data-aos="fade-up">
+      <div
+        class="about-img"
+        style="background-image: url('pics/profile-pic.jpg')"
+      >
+        <!-- <img class="me-img" src="pics/profile-pic.jpg"/> -->
+      </div>
+      <p>
+        Hey, my name is AllushAj sergio and i use vAntablAck as my nickname
+        across social media. i’m a junior web developer with experience in html,
+        CSS, JS, php, React, and sql.
+      </p>
+      <button class="btn-3" href="styles/files/CV SA 2023.pdf" download>
+        downloAd my resume
+      </button>
+    </div>
+  </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"
+></script>
+<script>
+  $(document).ready(function () {
+    createFiniteTypewriterEffect(
+      ".about-animated",
+      ["hi, i'm sergio Allushaj Web developer"],
+      200
+    );
+    // createFiniteTypewriterEffect(".about-span-animated", ["front end developer / javascript fAn / wordpress expert"], 800);
+  });
+  $(window).on("load", function () {
+    var fadeContainer = $(".about-me");
+
+    var options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Adjust the threshold as needed
+    };
+
+    var observer = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          // Set a timeout to delay the fade-in effect
+          setTimeout(function () {
+            // Fade out the image
+            fadeContainer
+              .find(".about-img")
+              .animate({ opacity: 0 }, 1000, function () {
+                // Callback function to hide the image after fade-out
+                $(this).hide();
+              });
+
+            // Fade in the rest of the content
+            fadeContainer.find("p, .resume").animate({ opacity: 1 }, 1000);
+          }, 2000); // Adjust the delay time as needed
+
+          // Stop observing once the content is visible
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    // Start observing the target element
+    observer.observe(fadeContainer[0]);
+  });
+</script>
+ <div id="projects" class="blocco" data-aos="fade-up">
+  <h2>projects</h2>
+  <div class="project-container">
+    <div class="project-list-left">
+      <div class="project" data-aos="fade-up">
+        <div
+          class="project-img"
+          style="background-image: url('pics/23-min.jpg')"
+        ></div>
+        <div class="project-text">
+          <h3>Artsense gallery v1.0</h3>
+          <a class="link" href="https://llvs9g-8080.csb.app/"
+            ><i class="fa-solid fa-caret-right"></i> Visit the website</a
+          >
+          <a class="link" href="https://4lr944-8080.csb.app/"
+            ><i class="fa-solid fa-caret-right"></i> see website code</a
+          >
+        </div>
+      </div>
+      <div class="project" data-aos="fade-up">
+        <div
+          class="project-img"
+          style="background-image: url('pics/vanta.gif')"
+        ></div>
+        <div class="project-text">
+          <h3>VAntAblAck portfolio</h3>
+          <a class="link" href="https://4lr944-8080.csb.app/"
+            ><i class="fa-solid fa-caret-right"></i> Visit the website</a
+          >
+          <a class="link" href="https://4lr944-8080.csb.app/"
+            ><i class="fa-solid fa-caret-right"></i> see website code</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="project-list-right">
+      <div class="project" data-aos="fade-up">
+        <div
+          class="project-img"
+          style="background-image: url('pics/38-min.jpg')"
+        ></div>
+        <div class="project-text">
+          <h3>Artsense gallery</h3>
+          <a class="link" href="https://z6xfy2-8080.csb.app/"
+            ><i class="fa-solid fa-caret-right"></i> Visit the website</a
+          >
+          <a class="link" href="https://4lr944-8080.csb.app/"
+            ><i class="fa-solid fa-caret-right"></i> see website code</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"
+></script>
+<script>
+  $(document).ready(function () {});
+</script>
+ <div id="skills" class="blocco">
+  <div class="skills-text" data-aos="fade-up">
+    <h2>skills</h2>
+    <p>The main area of expertise is front end development.</p>
+    <p>
+      HTML, CSS, JAVASCRIPT, building small and medium web applications with
+      React.
+    </p>
+  </div>
+  <div class="tech-list">
+    <i class="fa-brands fa-html5" data-aos="fade-up"></i>
+    <i class="fa-brands fa-css3" data-aos="fade-up"></i>
+    <i class="fa-brands fa-react" data-aos="fade-up"></i>
+    <i class="fa-brands fa-js" data-aos="fade-up"></i>
+  </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"
+></script>
+<script>
+  $(document).ready(function () {});
+</script>
+
+ <footer id="footer">
+  <div class="footer-container">
+    <div class="footer-socials">
+      <a class="footer-link link">instagram</a>
+      <a class="footer-link link">linkedin</a>
+      <a class="link" href="mailto:sergioallushaj@gmail.com">email</a>
+    </div>
+    <span>Made by myself</span>
+  </div>
+</footer>
+
+  </body>
+</html>

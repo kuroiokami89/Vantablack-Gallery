@@ -1,0 +1,38 @@
+<header id="header">
+  <div class="header-container">
+    <a id="logo" href="#top">
+      <span id="name">VAntAblAck itAly</span>
+    </a>
+    <div class="header-anchors">
+      <a class="link" href="#about">About</a>
+      <a class="link" href="#projects">projects</a>
+      <a class="link" href="#skills">skills</a>
+      <a class="link" href="#footer">coNtAct</a>
+    </div>
+  </div>
+</header>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  AOS.init();
+
+  $(document).ready(function () {
+    var lastScrollTop = 0;
+
+    // SCRIPT TO HIDE THE HEADER SCROLLING DOWN WITH
+    $(document).scroll(function () {
+      var scroll_pos = $(this).scrollTop();
+
+      if (scroll_pos > lastScrollTop) {
+        // Scrolling down
+        $("#header").fadeOut();
+      } else {
+        // Scrolling up
+        $("#header").fadeIn();
+      }
+
+      lastScrollTop = scroll_pos;
+    });
+  });
+</script>
