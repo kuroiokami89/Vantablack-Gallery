@@ -53,5 +53,6 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+# Website pages collection
 collections:
   - about
