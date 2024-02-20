@@ -56,3 +56,4 @@ plugins:
 # Website pages collection
 collections:
   - about
+  - contact

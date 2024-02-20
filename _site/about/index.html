@@ -22,12 +22,49 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
 
-    <link rel="icon" type="image/x-icon" href="pics/galleryVB.ico" />
+    <link rel="icon" type="image/x-icon" href="/assets/galleryVB.ico" />
     <title>VantaBlack Gallery</title>
   </head>
   <body>
-    <div class="about-wrapper"><div id="about" style="background-image: url('pics/gpt8.png')">
-  <div class="me">
+    <div class="about-wrapper">
+      <header id="header">
+  <div class="header-container">
+    <a id="logo" href="/">
+      <span id="name">Vantablack Gallery</span>
+    </a>
+    <div class="header-anchors">
+      <a class="link" href="/Gallery/about/">About</a>
+      <a class="link" href="/Gallery/contact/">Contact</a>
+    </div>
+  </div>
+</header>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  AOS.init();
+
+  $(document).ready(function () {
+    var lastScrollTop = 0;
+
+    // SCRIPT TO HIDE THE HEADER SCROLLING DOWN WITH
+    $(document).scroll(function () {
+      var scroll_pos = $(this).scrollTop();
+
+      if (scroll_pos > lastScrollTop) {
+        // Scrolling down
+        $("#header").fadeOut();
+      } else {
+        // Scrolling up
+        $("#header").fadeIn();
+      }
+
+      lastScrollTop = scroll_pos;
+    });
+  });
+</script>
+ <div id="about">
+  <div class="about-me">
     <h2>About me</h2>
     <p>
       Nullam condimentum magna nec molestie maximus. Donec at est nec nisl
@@ -35,16 +72,14 @@
       ac. Praesent finibus laoreet risus, vitae egestas erat vehicula ac.
       Pellentesque habitant morbi tristique senectus et netus et malesuada fames
       ac turpis egestas. Proin maximus diam ut odio vestibulum consectetur.
-      Morbi consequat mollis dui, sed egestas odio volutpat sit amet. Sed
-      imperdiet justo nisi, in consectetur lacus accumsan eu. Duis elit diam,
-      ultrices vel tempor non, tristique eu tellus. Morbi sit amet neque
-      laoreet, facilisis lorem nec, accumsan orci. Cras rhoncus velit sit amet
-      odio hendrerit, sit amet hendrerit arcu laoreet. Sed eget odio nisl.
-      Phasellus eget dapibus neque, eget dapibus libero. In sapien massa,
-      viverra non iaculis at, tincidunt a lectus.
+      Morbi consequat mollis dui, sed egestas odio volutpat sit amet.
     </p>
   </div>
+  <div class="about-img">
+    <img src="assets/_img/profile-pic.jpg" />
+  </div>
 </div>
-</div>
+
+    </div>
   </body>
 </html>
